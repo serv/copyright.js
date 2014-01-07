@@ -13,6 +13,8 @@ Copyright.js is a JavaScript plugin that updates the year in copyright. Here are
 2. Include the following in the desired location in the `body` tag.
     `<div id="plugin-copyright" data-owner="[copyright-owner]"></div>`
 3. Replace `[copyright-owner]` with the copyright owner name.
+4. As a result, you should get something like
+    `Copyright © 2014 Jason Kim`
 
 ## License
 
