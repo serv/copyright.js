@@ -4,7 +4,7 @@ Copyright.js is a JavaScript plugin that updates the year in copyright. Here are
 
 1. Automatically update the year in copyright text.
 2. You can specify the owner of the copyright.
-3. No jQuery dependancy! Copyright.js is just good ol' JavaScript.
+3. No jQuery dependency! Copyright.js is just good ol' JavaScript.
 
 ## Usage
 
