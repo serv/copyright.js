@@ -1,30 +1,34 @@
-var components = {
-  init: function() {
-    components.config = {
-      crSelectorID: 'plugin-copyright'
-    };
+(function(){
 
-    components.setup();
-  },
+  var components = {
+    init: function() {
+      components.config = {
+        crSelectorID: 'plugin-copyright'
+      };
 
-  setup: function() {
-    components.insertText();
-  },
+      components.setup();
+    },
 
-  currentYear: function() {
-    return new Date().getFullYear();
-  },
+    setup: function() {
+      components.insertText();
+    },
 
-  owner: function() {
-    return document.getElementById(components.config.crSelectorID).getAttribute('data-owner');
-  },
+    currentYear: function() {
+      return new Date().getFullYear();
+    },
 
-  insertText: function() {
-    var text = "Copyright &#169; " + components.currentYear() + " " + components.owner();
-    document.getElementById(components.config.crSelectorID).innerHTML = text;
-  }
-};
+    owner: function() {
+      return document.getElementById(components.config.crSelectorID).getAttribute('data-owner');
+    },
 
-document.addEventListener('DOMContentLoaded', function() {
-  components.init();
-}, false);
+    insertText: function() {
+        var text = "Copyright &#169; " + components.currentYear() + " " + components.owner();
+        document.getElementById(components.config.crSelectorID).innerHTML = text;
+      }
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    components.init();
+  }, false);
+
+})();
