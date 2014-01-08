@@ -1,30 +1,37 @@
-var components = {
-  init: function() {
-    components.config = {
-      crSelectorID: 'plugin-copyright'
-    };
+(function () {
 
-    components.setup();
-  },
+  'use strict';
 
-  setup: function() {
-    components.insertText();
-  },
+  var Copyright = function (config) {
+    this.config = config;
+    this.insertText();
+  };
 
-  currentYear: function() {
+  Copyright.prototype.currentYear = function () {
     return new Date().getFullYear();
-  },
+  };
 
-  owner: function() {
-    return document.getElementById(components.config.crSelectorID).getAttribute('data-owner');
-  },
+  Copyright.prototype.getElement = function () {
+    return document.querySelectorAll(this.config.crSelector)[0];
+  };
 
-  insertText: function() {
-    var text = "Copyright &#169; " + components.currentYear() + " " + components.owner();
-    document.getElementById(components.config.crSelectorID).innerHTML = text;
-  }
-};
+  Copyright.prototype.owner = function () {
+    if (this.getElement()) {
+      return this.getElement().getAttribute('data-owner');
+    }
+  };
 
-document.addEventListener('DOMContentLoaded', function() {
-  components.init();
-}, false);
+  Copyright.prototype.insertText = function () {
+    var text = "Copyright \u00A9 " + this.currentYear() + " " + this.owner();
+    if (this.getElement()) {
+      this.getElement().appendChild(document.createTextNode(text));
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var c = new Copyright({
+      crSelector: '#plugin-copyright'
+    });
+  }, false);
+
+}());
