@@ -4,10 +4,6 @@
 
   var Copyright = function (config) {
     this.config = config;
-    this.setup();
-  };
-
-  Copyright.prototype.setup = function () {
     this.insertText();
   };
 
