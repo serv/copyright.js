@@ -2,15 +2,15 @@
 
   var components = {
     init: function() {
-      components.config = {
+      this.config = {
         crSelectorID: 'plugin-copyright'
       };
 
-      components.setup();
+      this.setup();
     },
 
     setup: function() {
-      components.insertText();
+      this.insertText();
     },
 
     currentYear: function() {
@@ -18,13 +18,13 @@
     },
 
     owner: function() {
-      return document.getElementById(components.config.crSelectorID).getAttribute('data-owner');
+      return document.getElementById(this.config.crSelectorID).getAttribute('data-owner');
     },
 
     insertText: function() {
-        var text = "Copyright &#169; " + components.currentYear() + " " + components.owner();
-        document.getElementById(components.config.crSelectorID).innerHTML = text;
-      }
+      var text = "Copyright &#169; " + this.currentYear() + " " + this.owner();
+      document.getElementById(this.config.crSelectorID).innerHTML = text;
+    }
   };
 
   document.addEventListener('DOMContentLoaded', function() {
