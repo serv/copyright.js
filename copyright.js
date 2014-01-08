@@ -21,14 +21,14 @@
 
   Copyright.prototype.owner = function () {
     if (this.getElement()) {
-      this.getElement().getAttribute('data-owner');
+      return this.getElement().getAttribute('data-owner');
     }
   };
 
   Copyright.prototype.insertText = function () {
     var text = "Copyright \u00A9 " + this.currentYear() + " " + this.owner();
     if (this.getElement()) {
-      this.getElement().innerHTML = text;
+      this.getElement().appendChild(document.createTextNode(text));
     }
   };
 
