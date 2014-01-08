@@ -16,6 +16,27 @@ Copyright.js is a JavaScript plugin that updates the year in copyright. Here are
 4. As a result, you should get something like
     `Copyright © 2014 Jason Kim`
 
+## Contributing to the project
+
+### Reporting a bug
+
+1. [Raise a issue](https://github.com/serv/copyright.js/issues/new)
+2. Label the issue as a *bug*.
+3. Describe the bug and detail how you can reproduce the bug. Make sure to report OS and browser with the version number you are using.
+
+### Requesting a feature
+
+1. [Raise a issue](https://github.com/serv/copyright.js/issues/new)
+2. Label the issue as a *feature*.
+3. Describe the feature.
+
+### Making code changes
+
+1. Fork the repository.
+2. Make code changes.
+3. Test the changes.
+4. Make a pull request.
+
 ## License
 
 Copyright.js is released under the [MIT License](http://www.opensource.org/licenses/MIT).
