@@ -14,17 +14,17 @@
   };
 
   Copyright.prototype.owner = function(){
-    return document.getElementById(this.config.crSelectorID).getAttribute('data-owner');
+    return document.querySelectorAll(this.config.crSelector)[0].getAttribute('data-owner');
   };
 
   Copyright.prototype.insertText = function(){
     var text = "Copyright \u00A9 " + this.currentYear() + " " + this.owner();
-    document.getElementById(this.config.crSelectorID).innerHTML = text;
+    document.querySelectorAll(this.config.crSelector)[0].innerHTML = text;
   };
 
   document.addEventListener('DOMContentLoaded', function() {
     var c = new Copyright({
-      crSelectorID: 'plugin-copyright'
+      crSelector: '#plugin-copyright'
     });
   }, false);
 
