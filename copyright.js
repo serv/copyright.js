@@ -18,7 +18,7 @@
   };
 
   Copyright.prototype.insertText = function(){
-    var text = "Copyright &#169; " + this.currentYear() + " " + this.owner();
+    var text = "Copyright \u00A9 " + this.currentYear() + " " + this.owner();
     document.getElementById(this.config.crSelectorID).innerHTML = text;
   };
 
