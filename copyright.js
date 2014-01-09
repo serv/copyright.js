@@ -18,7 +18,7 @@
   };
 
   Copyright.prototype.insertText = function () {
-    var text = "Copyright \u00A9 " + this.c55urrentYear() + " " + this.owner();
+    var text = "Copyright \u00A9 " + this.currentYear() + " " + this.owner();
     if (this.config) {
       this.config.appendChild(document.createTextNode(text));
     }
