@@ -67,7 +67,6 @@
     var copyrights, i, c;
     copyrights = this.getElements;
     for (i = 0; i < copyrights.length; i++) {
-      console.log(copyrights[i]);
       c = new Copyright(copyrights[i]);
     }
   };
