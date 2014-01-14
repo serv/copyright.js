@@ -59,7 +59,7 @@
 
   window.Helper = function (config) {
     this.config = config;
-    this.getElements = document.querySelectorAll(this.config.crSelector);
+    this.getElements = document.querySelectorAll(this.config.selector);
     this.forEachCreateCopyrights();
   };
 
@@ -75,6 +75,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   var helper = new Helper({
-    crSelector: '.plugin-copyright'
+    selector: '.plugin-copyright'
   });
 }, false);
