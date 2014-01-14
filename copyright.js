@@ -49,9 +49,9 @@
       case 4:
         return "\u00A9 Copyright " + this.beginning() + " to the present, " + this.owner();
       case 5:
-        return "\u00A9 " + this.beginning() + " - " + this.currentYear() + " " + this.owner();
+        return "\u00A9 " + this.beginning() + "\u2013" + this.currentYear() + " " + this.owner();
       case 6:
-        return "\u00A9 Copyright " + this.beginning() + " - " + this.currentYear() + " " + this.owner();
+        return "\u00A9 Copyright " + this.beginning() + "\u2013" + this.currentYear() + " " + this.owner();
       default:
         return "Copyright \u00A9 " + this.currentYear() + " " + this.owner();
     }
