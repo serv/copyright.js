@@ -1,4 +1,4 @@
-(function () {
+(function (window) {
 
   'use strict';
 
@@ -57,7 +57,7 @@
     }
   };
 
-  var Helper = function (config) {
+  window.Helper = function (config) {
     this.config = config;
     this.getElements = document.querySelectorAll(this.config.crSelector);
     this.forEachCreateCopyrights();
@@ -71,10 +71,10 @@
     }
   };
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var helper = new Helper({
-      crSelector: '.plugin-copyright'
-    });
-  }, false);
+}(window));
 
-}());
+document.addEventListener('DOMContentLoaded', function () {
+  var helper = new Helper({
+    crSelector: '.plugin-copyright'
+  });
+}, false);
